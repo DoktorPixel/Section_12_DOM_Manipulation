@@ -6,7 +6,7 @@
   letter-spacing: 4px;
   word-spacing: -8px;
   color: tomato;
-  text-shadow: 
+  text-shadow:
     -1px -1px 0 firebrick,
     -2px -2px 0 firebrick,
     -3px -3px 0 firebrick,
@@ -16,6 +16,10 @@
     -7px -7px 0 firebrick,
     -8px -8px 0 firebrick,
     -30px 20px 40px dimgrey;
+}
+
+button {
+  margin-left: 20px;
 }
 
 .done {
