@@ -3,7 +3,7 @@ const input = document.getElementById("userinput");
 const ul = document.querySelector("ul");
 const li = document.getElementsByTagName("li");
 
-button.addEventListener("click", Onclick);
+button.addEventListener("click", onclick);
 input.addEventListener("keypress", addElement);
 
 buttonListElement();
@@ -12,7 +12,7 @@ function checkInputlength() {
   return input.value.length;
 }
 
-function Onclick() {
+function onclick() {
   if (checkInputlength() > 1) {
     createListElement();
   }
