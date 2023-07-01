@@ -60,3 +60,18 @@ button.addEventListener("click", (event) => {
 })
 
 
+Let person = "John";
+
+function makeworker() {
+
+person = "Pete";
+
+return function () { console.log(person);
+
+};
+
+}
+
+person = "Alan";
+
+Let work = makeWorker(); work();

@@ -22,13 +22,14 @@ function createListElement() {
   const li = document.createElement("li");
   const button = document.createElement("button");
   li.appendChild(document.createTextNode(input.value));
-  ul.appendChild(li);
   li.appendChild(button);
   button.innerHTML = "delete";
+  ul.appendChild(li);
   input.value = "";
 
-  buttonListElement();
+  button.addEventListener("click", clearElement);
 }
+
 
 function addElement() {
   if (checkInputlength() > 1 && event.keyCode === 13) {
@@ -37,11 +38,12 @@ function addElement() {
 }
 
 function buttonListElement() {
-  const button = document.querySelectorAll("li button");
-  for (i = 0; i < button.length; i++) {
-    button[i].addEventListener("click", clearElement);
+  const buttons = document.querySelectorAll("li .delete");
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", clearElement);
   }
 }
+
 
 function clearElement() {
   for (const i = 0; i < li.length; i++) {
